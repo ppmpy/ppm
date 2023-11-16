@@ -32,10 +32,11 @@ parser.add_argument(
     help='Software update',
 )
 
-pip_parser = parser.add_subparsers(dest='command')
-pip_parser.add_parser(
-    'install',
-    help='Package installer',
+init_parser = parser.add_subparsers(dest='controls')
+init_parser.add_parser(
+    'init',
+    help='Create a python project control',
+    description='test'
 )
 
 if __name__ == '__main__':
