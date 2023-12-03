@@ -3,17 +3,17 @@ import subprocess
 import requests
 import datetime
 
-from settings import RUN_PATH, RUN_FOLDER
-from templates import license
+from ppm.settings import RUN_PATH, RUN_FOLDER
+from ppm.templates import license
 
 
 def py_config():
 
     print('This will walk you through creating a new Python project.')
     print('It only covers the most common items, and tries to guess sensible defaults.')
-    print('Press ^C at any time to quit.')
+    print('Press ^C at any time to quit.', end='\n\n')
 
-    project_name = input(f'Project name: ({RUN_FOLDER}) ')
+    project_name = input(f'\n\nProject name: ({RUN_FOLDER}) ')
 
     if project_name is None:
         project_name = RUN_FOLDER
@@ -56,7 +56,7 @@ def py_config():
 
 
 def create_py_project(**kwargs):
-    print('Creating project...')
+    print('\n\nCreating project...')
     project_name = kwargs['project_name']
     project_script = kwargs['project_script']
     python_venv = kwargs['python_venv']
@@ -66,7 +66,7 @@ def create_py_project(**kwargs):
 
     if not os.path.exists(f'{RUN_PATH}/{project_name}'):
         os.makedirs(f'{RUN_PATH}/{project_name}')
-        print(f'Created project folder: {project_name}')
+        print(f'\n\nCreated project folder: {project_name}', end='\n\n')
 
     if python_venv:
         create_py_virtualenv(project_name=project_name)
@@ -77,7 +77,7 @@ def create_py_project(**kwargs):
     create_readme(project_name=project_name, project_script=project_script, project_license=project_license,
                   project_description=project_description, project_author=project_author)
 
-    print('Project successfully created.')
+    print('\n\nProject successfully created.', end='\n\n')
 
 
 def create_py_virtualenv(**kwargs):
@@ -85,11 +85,11 @@ def create_py_virtualenv(**kwargs):
 
     subprocess.run(
         ['python3', '-m', 'venv', f'{RUN_PATH}/{project_name}/venv'])
-    print('Created Python virtual environment.')
-    print('To activate virtual environment, run:')
-    print(f'cd {RUN_PATH}/{project_name}')
-    print('source venv/bin/activate')
-    print('To deactivate virtual environment, run:')
+    print('Created Python virtual environment.', end='\n\n')
+    print('\n\nTo activate virtual environment, run:', end='\n\n')
+    print(f'\n\ncd {RUN_PATH}/{project_name}')
+    print('source venv/bin/activate', end='\n\n')
+    print('\n\nTo deactivate virtual environment, run:', end='\n\n')
     print('deactivate')
 
 
@@ -102,7 +102,7 @@ def create_gitignore(**kwargs):
     with open(f'{RUN_PATH}/{project_name}/.gitignore', 'w') as f:
         f.write(gitignore)
 
-    print('Created .gitignore file.')
+    print('\n\nCreated .gitignore file.', end='\n\n')
 
 
 def create_py_requirements(**kwargs):
@@ -114,7 +114,7 @@ def create_py_requirements(**kwargs):
     with open(f'{RUN_PATH}/{project_name}/requirements.txt', 'w') as f:
         f.write('requests')
     
-    print('Created requirements.txt file.')
+    print('\n\nCreated requirements.txt file.', end='\n\n')
 
 
 def create_license(**kwargs):
@@ -146,4 +146,4 @@ def create_readme(**kwargs):
         f.write(f'## Author\n')
         f.write(f'{project_author}\n')
 
-    print('Created README.md file.')
+    print('\n\nCreated README.md file.', end='\n\n')
