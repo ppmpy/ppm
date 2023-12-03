@@ -3,6 +3,7 @@
 PPM is a simple project manager for python projects. Used for easy installation and use of packages and frameworks. PPM is a command line tool.
 ## How to install PPM?
 To install PPM, you need to run the following command in the terminal:
+
 if you are using Linux:
 ```bash
 sudo pip3 install ppm
