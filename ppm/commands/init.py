@@ -1,7 +1,7 @@
 from argparse import Namespace
 from pick import pick
-from configure import parser
-from projects import py_config
+from ppm.configure import parser
+from ppm.projects import py_config
 
 args:Namespace = parser.parse_args()
 
