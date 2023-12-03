@@ -17,4 +17,4 @@ if you are using Mac:
 pip3 install ppm
 ```
 ## Author of PPM and contacts
-Author: [Quvonchbek Bobojonov](https://QuvonchbekBobojonov.github.io)
+Author: [Quvonchbek Bobojonov](https://github/QuvonchbekBobojonov)
