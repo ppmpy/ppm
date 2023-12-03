@@ -18,3 +18,7 @@ pip3 install ppm
 ```
 ## Author of PPM and contacts
 Author: [Quvonchbek Bobojonov](https://github/QuvonchbekBobojonov)
+Email: moorfoinfo@gmail.com
+Linkedin: [Quvonchbek Bobojonov](https://www.linkedin.com/in/moorfo/)
+Instagram: [Quvonchbek Bobojonov](https://www.instagram.com/moorfo.uz/)
+Telegram: [Quvonchbek Bobojonov](https://t.me/QuvonchbekBobojonov)
